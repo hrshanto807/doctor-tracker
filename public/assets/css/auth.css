@@ -1,0 +1,188 @@
+/* ==========================================================================
+   DOCTOR TRACKER - AUTHENTICATION STYLES (LOGIN & PORTAL ACCESS)
+   100% External CSS - Zero inline or internal styles
+   ========================================================================== */
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--bg-app);
+}
+
+.login-banner-side {
+  flex: 1.1;
+  background: linear-gradient(145deg, #0f172a 0%, #115e59 60%, #0d9488 100%);
+  color: #ffffff;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-banner-side::after {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.login-brand-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.login-banner-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.login-banner-desc {
+  max-width: 480px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+}
+
+.feature-check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.feature-check-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-check-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2dd4bf;
+  flex-shrink: 0;
+}
+
+.login-footer-badge {
+  background-color: #10b981;
+  color: #ffffff;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Right Form Side */
+.login-form-side {
+  flex: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 440px;
+}
+
+.login-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--slate-900);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.demo-credentials-box {
+  background-color: var(--primary-light);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.demo-credentials-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.btn-autofill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--slate-400);
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  transition: var(--transition-fast);
+}
+
+.password-toggle-btn:hover {
+  color: var(--slate-700);
+}
+
+/* Responsive Breakpoints for Login */
+@media (max-width: 1024px) {
+  .login-banner-side {
+    padding: 2.5rem;
+  }
+  .login-banner-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .login-banner-side {
+    display: none;
+  }
+  .login-form-side {
+    flex: 1;
+    padding: 2rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    max-width: 100%;
+  }
+  .login-title {
+    font-size: 1.6rem;
+  }
+}
+
